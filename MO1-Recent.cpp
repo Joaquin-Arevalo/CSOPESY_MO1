@@ -592,7 +592,7 @@ void scheduler_start(ProcessManager& manager) {
     while (!stopScheduler) {
         // Interruptible sleep/frequency
         for (int frequency = 0; frequency < GLOBAL_CONFIG.batchProcessFreq && !stopProcessCreation; ++frequency) {
-            this_thread::sleep_for(chrono::milliseconds(100));
+            this_thread::sleep_for(chrono::milliseconds(175));
         }
         if (stopProcessCreation) break;
 
